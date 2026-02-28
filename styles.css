@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+nav {
+  background: var(--primary-color);
+  padding: 10px 20px;
+}
+
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+  background: var(--secondary-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.skills {
+  padding: 20px;
+}
+
+.skill {
+  background: #e0e0e0;
+  border-radius: 5px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.skill-progress {
+  background: var(--primary-color);
+  height: 100%;
+  width: 0;
+  transition: width 1s;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border: 2px solid var(--primary-color);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 10px;
+  }
+}
